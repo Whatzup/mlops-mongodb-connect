@@ -49,6 +49,7 @@ package_dir={"":"src"}
 with open("README.md", 'r', encoding='utf-8') as f:
     long_description=f.read()
 
+"""
 def get_requirements(file_path:str)->List[str]:
     requirements=[]
     try:
@@ -61,7 +62,7 @@ def get_requirements(file_path:str)->List[str]:
         print(f"Warning: {file_path} not found.")
         return []
     return requirements
-
+"""
 
 setup(
     name=PKG_NAME,
@@ -75,7 +76,7 @@ setup(
     project_urls=project_urls,
     package_dir=package_dir,
     packages=find_packages(where="src"),
-    install_requires=get_requirements("requirements_dev.txt")
+    # install_requires=get_requirements("requirements_dev.txt")
 )
 
 # if __name__ == "__main__":
